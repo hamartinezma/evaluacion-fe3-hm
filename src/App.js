@@ -10,14 +10,15 @@ import Cabecera from "./components/Cabecera";
 import Listado from "./components/Listado";
 
 function App() {
-  const [unidades, setContador] = useState(0);
+  const [contador, setContador] = useState(0); //[valorActual, setValorActual] = useState(valorInicial)
+
   const agregarUnidades = () => {
-    setContador(unidades + 1);
+    setContador(contador + 1);
   };
 
   return (
     <div className="App">
-      <Cabecera total={unidades} />
+      <Cabecera total={contador} />
       <Listado incrementarTotal={agregarUnidades} />
     </div>
   );
